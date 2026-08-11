@@ -1,0 +1,42 @@
+E_CON Estado conyugal Carácter 
+1 Vive con su pareja en unión libre
+2 Está separado(a)
+3 Está divorciado(a)
+4 Está viudo(a)
+5 Está casado(a)
+6 Está soltero(a)
+9 No sabe
+
+EMP_PPAL Clasificación de empleos formales e informales de la primera actividad
+1 Empleo informal 
+2 Empleo formal
+
+Sexo: SEX, 1 Hombre 2 Mujer
+Edad: EDA, 
+00 para menores de 1 año, 
+01-96 Número de años cumplidos del integrante del hogar, 
+97 para 07 y más, 98 no especificado (para 12 años y más), 
+99 no especificado (menores de 12)
+
+CS_P13_1 ¿Hasta qué grado aprobó... en la escuela (nivel escolar)
+00 Ninguna
+01 Preescolar
+02 Primaria
+03 Secundaria
+04 Preparatoria o bachillerato
+05 Normal
+06 Carrera técnica
+07 Profesional
+08 Maestría
+09 Doctorado
+99 No sabe
+
+
+
+
+
+
+
+
+
+

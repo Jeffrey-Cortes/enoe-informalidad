@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Entornos y secretos
+.env
+.venv/
+venv/
+frontend/.env
+
+# VS Code
+.vscode/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Datos originales y procesados
+data/
+conjunto_de_datos_enoe_2026_1t_csv/
+enoe_informalidad_2026_trim1_xls/
+
+# Descargas / archivos comprimidos
+*.zip
+
+# Documentación fuente pesada
+*.pdf
+
+# AWS CLI descargado localmente
+aws/
+awscliv2.zip
+
+# Sistema
+.DS_Store
+Thumbs.db
