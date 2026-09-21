@@ -108,3 +108,4 @@ class PrediccionOutput(BaseModel):
     ]
 
     factores_principales: list[FactorExplicativo]
+    explicacion: str

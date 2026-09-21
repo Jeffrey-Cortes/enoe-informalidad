@@ -202,7 +202,19 @@ function Resultado({ resultado }) {
 
       <div className="factores">
         {resultado.factores_principales.map((factor, index) => {
-          const aumenta = factor.direccion === "aumenta";
+          const claseDireccion =
+            factor.direccion === "aumenta"
+              ? "aumenta"
+              : factor.direccion === "reduce"
+              ? "reduce"
+              : "neutral";
+
+          const etiquetaDireccion =
+            factor.direccion === "aumenta"
+              ? "↑ Aumenta"
+              : factor.direccion === "reduce"
+              ? "↓ Reduce"
+              : "= Neutral";
 
           return (
             <div className="factor" key={`${factor.variable}-${index}`}>
@@ -216,19 +228,19 @@ function Resultado({ resultado }) {
                 </span>
               </div>
 
-              <span
-                className={
-                  aumenta
-                    ? "direccion aumenta"
-                    : "direccion reduce"
-                }
-              >
-                {aumenta ? "↑ Aumenta" : "↓ Reduce"}
+              <span className={`direccion ${claseDireccion}`}>
+                {etiquetaDireccion}
               </span>
             </div>
           );
         })}
       </div>
+
+      <div className="separador" />
+
+      <h2>En palabras simples</h2>
+
+      <p className="explicacion">{resultado.explicacion}</p>
 
       <p className="nota">
         Los factores describen cómo el modelo construyó esta predicción.
