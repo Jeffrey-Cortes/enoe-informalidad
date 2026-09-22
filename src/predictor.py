@@ -4,6 +4,8 @@ import joblib
 import pandas as pd
 import shap
 
+from src.explicaciones import generar_explicacion
+
 
 MODEL_PATH = (
     Path(__file__).resolve().parents[1]
@@ -153,8 +155,12 @@ def predecir(datos_persona: dict) -> dict:
         top_n=5
     )
 
-    return {
+    resultado = {
         "probabilidad_informalidad": probabilidad,
         "nivel_riesgo": clasificar_riesgo(probabilidad),
         "factores_principales": factores,
     }
+
+    resultado["explicacion"] = generar_explicacion(resultado)
+
+    return resultado
